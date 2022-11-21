@@ -21,33 +21,40 @@ public class Catalogo {
 			
 			System.out.print("\nCategorie prodotti: " + "\n1.TV , 2.Smartphone, 3.Cuffie" 
 					         + "\nSegli il numero della categoria a cui appartiene: ");
-			int scelta = sc.nextInt();
+			String scelta = sc.nextLine();
 			
-			if(scelta == 1) {
+			if(scelta.equals("1")) {
+				System.out.print("Smart? (Rispondere con si o no): ");
+				String smartStr = sc.nextLine();
+				boolean smart = smartStr.equals("si");
+				
 				System.out.print("\nGrandezza televisore: ");
-				int dimensioniTv = sc.nextInt();
-				System.out.print("Smart? (Rispondere con true o false): ");
-				boolean smart = sc.nextBoolean();
+				String dimensioniTvStr = sc.nextLine();
+				int dimensioniTv = Integer.parseInt(dimensioniTvStr);
+				
 				System.out.println("-------------------------------------------");
+				
 				Televisore t = new Televisore(marca, prezzo, nome, smart, dimensioniTv);
 				p[i] = t;
 			}
 			
-			if(scelta == 2) {
+			if(scelta.equals("2")) {
 				System.out.print("\nDimensione memoria del cellulare: ");
 				int dimensioneMemoria = sc.nextInt();
+				
 				System.out.println("-------------------------------------------");
+				
 				Smartphone s = new Smartphone(marca, prezzo, nome, dimensioneMemoria);
 				p[i] = s;
 			}
 			
-			if(scelta == 3) {
-				System.out.println("\nColore cuffie: ");
+			if(scelta.equals("3")) {
+				System.out.print("\nColore cuffie: ");
 				String coloreCuffie = sc.nextLine();
 				
-;				System.out.print("\nWireless? (Rispondere con true o false): ");
+;				System.out.print("\nWireless? (Rispondere con si o no): ");
 				String wireles = sc.nextLine();
-				boolean wireless = Boolean.parseBoolean(wireles);
+				boolean wireless = wireles.equals("si");
 				
 				System.out.println("-------------------------------------------");
 				

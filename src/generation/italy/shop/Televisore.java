@@ -28,7 +28,7 @@ public class Televisore extends Prodotto {
 	
 	@Override
 	public String toString() {
-		return super.toString() + "\nE' una SmartTV: " + isSmart() + "\nDimensioni: " 
+		return super.toString() + "\nE' una SmartTV: " + (isSmart() ? "si" : "no") + "\nDimensioni: " 
 	    + dimensioni + " pollici";
 	}
 }
