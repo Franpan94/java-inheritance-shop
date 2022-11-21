@@ -16,15 +16,15 @@ public class Catalogo {
 			String marca = sc.nextLine();
 			
 			System.out.print("\nPrezzo prodotto: ");
-			String prezz = sc.nextLine();
-			int prezzo = Integer.parseInt(prezz);
+			String prezzoStr = sc.nextLine();
+			int prezzo = Integer.parseInt(prezzoStr);
 			
 			System.out.print("\nCategorie prodotti: " + "\n1.TV , 2.Smartphone, 3.Cuffie" 
 					         + "\nSegli il numero della categoria a cui appartiene: ");
 			String scelta = sc.nextLine();
 			
 			if(scelta.equals("1")) {
-				System.out.print("Smart? (Rispondere con si o no): ");
+				System.out.print("\nSmart? (Rispondere con si o no): ");
 				String smartStr = sc.nextLine();
 				boolean smart = smartStr.equals("si");
 				
@@ -53,8 +53,8 @@ public class Catalogo {
 				String coloreCuffie = sc.nextLine();
 				
 ;				System.out.print("\nWireless? (Rispondere con si o no): ");
-				String wireles = sc.nextLine();
-				boolean wireless = wireles.equals("si");
+				String wirelessStr = sc.nextLine();
+				boolean wireless = wirelessStr.equals("si");
 				
 				System.out.println("-------------------------------------------");
 				
@@ -63,7 +63,7 @@ public class Catalogo {
 				
 			}
 			
-			System.out.println("Nuovo prodotto: " + p[i]);
+			System.out.println("Nuovo prodotto" + p[i]);
 			System.out.println("-------------------------------------------");
 			break;
 		}
